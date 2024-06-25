@@ -34,17 +34,19 @@ body {
 .navlinks ul li a {
     text-decoration: none;
     color: #464545;
-    background-color: rgba(255, 166, 0, 0.75);
+    background-color: transparent;
     border-radius: 10px;
     font-weight: bold;
-    font-size: large;
+    font-size: 13px;
     padding: 10px 15px;
     display: block;
+    transition: all 0.35s ease-in-out;
 }
-.navlinks ul li a:hover{
-    color: rgb(0, 0, 0); 
-    background-color: #e69600be;
-}
+ .navlinks ul li a:hover{
+   text-decoration: underline;
+   text-decoration-color: #e69500;
+   text-decoration-thickness: 2px;
+} 
 .navlinks ul li:hover .dropdown {
     display: block;
 }
@@ -62,6 +64,9 @@ body {
 .navlinks ul li .dropdown li a {
     padding: 10px;
     white-space: nowrap;
+}
+.navlinks ul li .dropdown li a:hover{
+    color: black;
 }
 .donate-button {
     margin-left: 100px;
@@ -123,9 +128,9 @@ body {
 }
 
 .footer-column h4 {
-    font-size: 16px;
+    font-size: 14px;
     margin-bottom: 20px;
-    color: orange;
+    color: white;
     text-transform: uppercase;
     font-weight: bold;
 }
@@ -142,10 +147,13 @@ body {
 .footer-column ul li a {
     text-decoration: none;
     color: #fff;
+    font-size: 12px;
+    transition: all.35s ease;
 }
 
 .footer-column ul li a:hover {
-    text-decoration: underline;
+font-size: 13px;
+color: rgb(230, 154, 14);
 }
 
 .footer-bottom {
@@ -182,4 +190,165 @@ body {
 
 .footer-links li a:hover {
     text-decoration: underline;
+}
+/* Mobile Styles */
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        padding: 10px 20px;
+    }
+
+    .navlinks {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .navlinks ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navlinks ul li a {
+        width: 100%;
+        text-align: left;
+    }
+
+    .donate-button {
+        width: 100%;
+        margin-left: 0;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .homepage img {
+        height: auto;
+    }
+
+    .footer-nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-column {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        margin-top: 20px;
+    }
+}
+
+/* Tablet Styles */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .navbar {
+        padding: 10px 30px;
+    }
+
+    .navlinks {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .navlinks ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navlinks ul li a {
+        width: 100%;
+        text-align: left;
+    }
+
+    .donate-button {
+        width: 100%;
+        margin-left: 0;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .homepage img {
+        height: auto;
+    }
+
+    .footer-nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-column {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        margin-top: 20px;
+    }
+}
+
+/* Desktop Styles */
+@media (min-width: 1025px) {
+    .navbar {
+        padding: 10px 60px;
+    }
+
+    .navlinks {
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .navlinks ul {
+        flex-direction: row;
+    }
+
+    .navlinks ul li a {
+        width: auto;
+        text-align: center;
+    }
+
+    .donate-button {
+        width: auto;
+        margin-left: 100px;
+        text-align: center;
+        padding: 0 40px;
+    }
+
+    .homepage img {
+        height: 500px;
+    }
+
+    .footer-nav {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .footer-column {
+        width: auto;
+        margin: 0 10px;
+    }
+
+    .footer-bottom {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .footer-links {
+        flex-direction: row;
+        margin-top: 0;
+    }
 }
