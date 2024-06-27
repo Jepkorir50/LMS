@@ -300,7 +300,7 @@ color: rgb(230, 154, 14);
     }
 }
 
-/* Desktop Styles */
+/* Desktop Styles
 @media (min-width: 1025px) {
     .navbar {
         padding: 10px 60px;
@@ -350,5 +350,5 @@ color: rgb(230, 154, 14);
     .footer-links {
         flex-direction: row;
         margin-top: 0;
-    }
-}
+    } */
+
